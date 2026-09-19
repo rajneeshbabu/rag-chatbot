@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>🐧 Penguin AI — Multilingual RAG Chatbot with RLHF</title>
+  <title>🤖 RAG Chatbot — Agentic Multilingual RAG with RLHF</title>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Segoe UI',system-ui,sans-serif;background:#05050f;color:#e0e0e0;overflow-x:hidden;min-height:100vh}
@@ -135,7 +135,7 @@
 <header>
   <div class="wrap">
     <div style="font-size:3rem;margin-bottom:.3rem">🐧</div>
-    <h1>Penguin AI</h1>
+    <h1>RAG Chatbot</h1>
     <p class="tagline">Multilingual RAG · RLHF · Agentic RAG · Powered by Groq Free API</p>
     <div class="badge-row">
       <span class="badge">⚡ Llama 4 Scout</span>
@@ -149,7 +149,7 @@
     </div>
     <div class="cta-row">
       <a href="https://penguin-ai-eqxw9u846dnak3drizxjmt.streamlit.app" class="cta" target="_blank">🚀 Launch Live App</a>
-      <a href="https://github.com/rajneeshbabu/penguin-ai" class="cta outline" target="_blank">🐧 View on GitHub</a>
+      <a href="https://github.com/rajneeshbabu/rag-chatbot" class="cta outline" target="_blank">🐧 View on GitHub</a>
     </div>
   </div>
 </header>
@@ -173,8 +173,8 @@
   <div class="wrap">
     <h2>🗨️ See It In Action</h2>
     <div class="chat-window" id="chatDemo">
-      <div class="chat-lbl">🐧 PENGUIN AI</div>
-      <div class="chat-msg bot"><div class="bubble bot">Hello! I'm Penguin AI — ask me anything in any language. I support General Chat, Multilingual RAG, Agentic reasoning, and Domain Expert modes. 🌍</div></div>
+      <div class="chat-lbl">🤖 RAG CHATBOT</div>
+      <div class="chat-msg bot"><div class="bubble bot">Hello! I'm RAG Chatbot — ask me anything in any language. I support General Chat, Multilingual RAG, Agentic reasoning, and Domain Expert modes. 🌍</div></div>
     </div>
   </div>
 </section>
@@ -310,7 +310,7 @@
   <div class="wrap">
     <h2 class="section-title">🚀 Quick Start</h2>
     <div class="steps">
-      <div class="step"><span class="step-num">1</span><h4>Clone</h4><p><code>git clone https://github.com/rajneeshbabu/penguin-ai.git</code><br><br><code>cd penguin-ai</code></p></div>
+      <div class="step"><span class="step-num">1</span><h4>Clone</h4><p><code>git clone https://github.com/rajneeshbabu/rag-chatbot.git</code><br><br><code>cd rag-chatbot</code></p></div>
       <div class="step"><span class="step-num">2</span><h4>Install</h4><p><code>pip install -r requirements.txt</code><br><br>Includes <code>langdetect</code> for auto language detection.</p></div>
       <div class="step"><span class="step-num">3</span><h4>API Key</h4><p>Free key at <strong>console.groq.com</strong><br><br><code>echo "GROQ_API_KEY=gsk_..." > .env</code></p></div>
       <div class="step"><span class="step-num">4</span><h4>Run</h4><p><code>streamlit run app.py</code><br><br>Opens at <strong>localhost:8501</strong></p></div>
@@ -319,7 +319,7 @@
 </section>
 
 <footer>
-  🐧 Penguin AI &nbsp;·&nbsp; Llama 4 · Qwen 3 · Whisper · Groq · LangChain · FAISS · Multilingual RAG · RLHF &nbsp;·&nbsp; MIT License
+  🐧 RAG Chatbot &nbsp;·&nbsp; Llama 4 · Qwen 3 · Whisper · Groq · LangChain · FAISS · Multilingual RAG · RLHF &nbsp;·&nbsp; MIT License
 </footer>
 
 <script>
@@ -432,7 +432,7 @@
       if(m.role==='bot'){
         var wrap=document.createElement('div');wrap.className='chat-msg bot';
         if(m.lang){var lt=document.createElement('div');lt.className='lang-tag';lt.textContent='🌐 '+m.lang;wrap.appendChild(lt);}
-        var lbl=document.createElement('div');lbl.className='chat-lbl';lbl.textContent='🐧 PENGUIN AI';wrap.appendChild(lbl);
+        var lbl=document.createElement('div');lbl.className='chat-lbl';lbl.textContent='🤖 RAG CHATBOT';wrap.appendChild(lbl);
         var b=document.createElement('div');b.className='bubble bot';
         var td=document.createElement('div');td.className='typing';
         td.innerHTML='<span></span><span></span><span></span>';

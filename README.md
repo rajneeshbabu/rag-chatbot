@@ -1,4 +1,4 @@
-# 🐧 Penguin AI — Multi-mode Chatbot with RLHF & Multilingual RAG
+# 🤖 RAG Chatbot — Agentic, Multilingual Document QA with RLHF
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://python.org)
 [![Llama 4](https://img.shields.io/badge/Llama_4_Scout-17B-purple)](https://groq.com)
@@ -11,13 +11,13 @@
 [![RLHF](https://img.shields.io/badge/RLHF-PPO_Style-cyan)](https://github.com)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit%20Cloud-FF4B4B)](https://penguin-ai-eqxw9u846dnak3drizxjmt.streamlit.app)
-[![Project Page](https://img.shields.io/badge/Project%20Page-GitHub%20Pages-222?logo=github)](https://rajneeshbabu.github.io/penguin-ai/)
+[![Project Page](https://img.shields.io/badge/Project%20Page-GitHub%20Pages-222?logo=github)](https://rajneeshbabu.github.io/rag-chatbot/)
 
 A production-quality multi-mode AI chatbot with **RLHF (Reinforcement Learning from Human Feedback)**, **Multilingual Production RAG**, **Agentic RAG**, **voice-to-text**, animated neural network UI, and support for the latest models via the **Groq free API** — no GPU needed.
 
 🚀 **[Launch Streamlit App →](https://penguin-ai-eqxw9u846dnak3drizxjmt.streamlit.app)**
 
-🌐 **[View Project Page →](https://rajneeshbabu.github.io/penguin-ai/)**
+🌐 **[View Project Page →](https://rajneeshbabu.github.io/rag-chatbot/)**
 
 ---
 
@@ -63,7 +63,7 @@ A production-quality multi-mode AI chatbot with **RLHF (Reinforcement Learning f
 
 ## RLHF System
 
-Penguin AI implements a full **PPO-style RLHF loop** that runs in-session without any GPU:
+RAG Chatbot implements a full **PPO-style RLHF loop** that runs in-session without any GPU:
 
 1. **Reward Model** — Combines human 👍/👎 (60%) + length quality (20%) + diversity (10%) + specificity (10%) → reward in `[-1, +1]`
 2. **Value Baseline** — Exponential moving average of past rewards (EMA critic)
@@ -115,7 +115,7 @@ User Question
 
 The `index.html` file is deployed as a GitHub Pages static demo — no server or API key needed.
 
-**View it here → [rajneeshbabu.github.io/penguin-ai](https://rajneeshbabu.github.io/penguin-ai/)**
+**View it here → [rajneeshbabu.github.io/rag-chatbot](https://rajneeshbabu.github.io/rag-chatbot/)**
 
 It showcases the animated UI, auto-playing chat demo, RLHF flow diagram, RAG pipeline, model table, and quick-start steps. To enable GitHub Pages: go to your repo → **Settings → Pages → Source: Deploy from branch → Branch: main → Folder: / (root)**.
 
@@ -124,7 +124,7 @@ It showcases the animated UI, auto-playing chat demo, RLHF flow diagram, RAG pip
 ## Project Structure
 
 ```
-penguin-ai/
+rag-chatbot/
 ├── app.py                      # Main Streamlit app (RLHF + RAG + Voice + all modes)
 ├── chatbot_pipeline.ipynb      # LangChain pipeline walkthrough notebook
 ├── requirements.txt            # All dependencies
@@ -142,8 +142,8 @@ penguin-ai/
 ### Step 1 — Clone the repo
 
 ```bash
-git clone https://github.com/rajneeshbabu/penguin-ai.git
-cd penguin-ai
+git clone https://github.com/rajneeshbabu/rag-chatbot.git
+cd rag-chatbot
 ```
 
 ### Step 2 — Install dependencies

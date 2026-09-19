@@ -1,4 +1,4 @@
-# Penguin AI — Production RAG + Agentic RAG + Multilingual RAG + RLHF + Voice
+# RAG Chatbot — Production RAG + Agentic RAG + Multilingual RAG + RLHF + Voice
 # Install: pip install -r requirements.txt
 
 # Groq API (Llama inference — free tier)

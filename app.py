@@ -1,5 +1,5 @@
 """
-Penguin — Production RAG + Agentic RAG + Multilingual RAG
+RAG Chatbot — Production RAG + Agentic RAG + Multilingual RAG
 Pipeline based on: RAG at Scale (Production Architecture Guide)
 
 Layers implemented:
@@ -61,14 +61,14 @@ def _get_server_api_key():
 
 # ── Page config ────────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="Penguin AI — Production RAG Chatbot",
+    page_title="RAG Chatbot — Agentic Multilingual RAG",
     page_icon="🐧",
     layout="wide",
     initial_sidebar_state="expanded",
     menu_items={
-        "Get Help":        "https://github.com/rajneeshbabu/penguin-ai",
-        "Report a bug":    "https://github.com/rajneeshbabu/penguin-ai/issues",
-        "About":           "**Penguin AI** — Production RAG + Agentic RAG chatbot\nBuilt by [Rajneesh](https://github.com/rajneeshbabu)",
+        "Get Help":        "https://github.com/rajneeshbabu/rag-chatbot",
+        "Report a bug":    "https://github.com/rajneeshbabu/rag-chatbot/issues",
+        "About":           "**RAG Chatbot** — Production RAG + Agentic RAG chatbot\nBuilt by [Rajneesh](https://github.com/rajneeshbabu)",
     }
 )
 
@@ -876,7 +876,7 @@ DOMAIN_PROMPTS = {
     "🧘 Fitness & Wellness": "You are an expert fitness coach. Provide evidence-based advice on exercise, nutrition, and mental health.",
     "🔬 Research Assistant": "You are an expert research assistant. Help with literature reviews, methodology, and academic writing.",
 }
-GENERAL_PROMPT = "You are Penguin, a highly capable and friendly AI assistant. Be helpful, concise when needed, and detailed when depth is required."
+GENERAL_PROMPT = "You are a highly capable and friendly AI assistant. Be helpful, concise when needed, and detailed when depth is required."
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -905,7 +905,7 @@ init_state()
 # SIDEBAR
 # ══════════════════════════════════════════════════════════════════════════════
 with st.sidebar:
-    st.markdown("### 🐧 Penguin")
+    st.markdown("### 🤖 RAG Chatbot")
     st.markdown("<span class='pipeline-badge'>Production RAG</span> <span class='pipeline-badge agent-badge'>Agentic RAG</span> <span class='pipeline-badge' style='background:rgba(6,182,212,.15);border-color:rgba(6,182,212,.35);color:#67e8f9'>🌐 Multilingual</span>", unsafe_allow_html=True)
     st.markdown("---")
 
@@ -1082,7 +1082,7 @@ with st.sidebar:
 # ══════════════════════════════════════════════════════════════════════════════
 # MAIN AREA
 # ══════════════════════════════════════════════════════════════════════════════
-st.markdown("<div class='main-title'>🐧 Penguin AI</div>", unsafe_allow_html=True)
+st.markdown("<div class='main-title'>🐧 RAG Chatbot</div>", unsafe_allow_html=True)
 st.markdown("<div class='sub-title'>Production RAG · Agentic RAG · Llama 4 Scout · Qwen 3 32B · Whisper · Groq</div>", unsafe_allow_html=True)
 
 # Pipeline ribbon
@@ -1134,7 +1134,7 @@ for msg_idx, msg in enumerate(st.session_state.messages):
     if msg["role"] == "user":
         st.markdown(f"<div class='msg-lbl'>YOU</div><div class='user-msg'>{msg['content']}</div>", unsafe_allow_html=True)
     else:
-        lbl = msg.get("mode","PENGUIN")
+        lbl = msg.get("mode","RAG CHATBOT")
         st.markdown(
             f"<div class='msg-lbl'>🐧 {lbl.upper()}</div>"
             f"<div class='bot-msg'>{msg['content']}</div>",
@@ -1451,7 +1451,7 @@ if user_input:
                 st.toast("⚡ Cache hit!", icon="⚡")
 
             system_prompt = (
-                "You are Penguin in Advanced RAG mode. Answer ONLY from the provided context. "
+                "You are a RAG assistant in Advanced mode. Answer ONLY from the provided context. "
                 "Cite chunks as [p.X] or [Chunk N]. If unsure, say so. "
                 f"IMPORTANT: The user is writing in {lang_name} — respond in the same language.\n\n"
                 f"RETRIEVED CONTEXT:\n{context}"
@@ -1482,7 +1482,7 @@ if user_input:
             messages = [{"role":"system","content":GENERAL_PROMPT + rlhf_addon}]
             for m in history:
                 messages.append({"role":m["role"],"content":m["content"]})
-            st.markdown("<div class='msg-lbl'>🐧 PENGUIN</div>", unsafe_allow_html=True)
+            st.markdown("<div class='msg-lbl'>🤖 RAG CHATBOT</div>", unsafe_allow_html=True)
             placeholder = st.empty()
             stream = client.chat.completions.create(
                 model=model, messages=messages, temperature=eff_temp,
