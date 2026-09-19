@@ -90,8 +90,12 @@ Document Upload
     ├── Cross-Encoder Reranking (top-20 → top-5, ms-marco-MiniLM-L-6-v2)
     ├── MMR Deduplication + Context Compression
     ├── Citation Grounding (source, page, score per chunk)
-    └── LRU Query Cache (1hr TTL, saves 30-60% inference cost)
+    ├── LRU Query Cache (1hr TTL, saves 30-60% inference cost)
+    └── Faithfulness Scoring (answer checked back against its retrieved context)
 ```
+
+Every answer is scored for **faithfulness** against the context it was actually given, so an
+answer that drifts away from the retrieved passages is visible rather than silently trusted.
 
 ---
 
